@@ -69,10 +69,10 @@ syn keyword junosVar        low high
 syn match   junosVar        /\d\+/
 
 syn keyword junosInterface  vme
-syn match   junosInterface  /\(xe\|ge\|vcp\|gr\)\-[0-9]\+\/[0-9]\+\/[0-9]\+\(\|\n\|\s\|\.[0-9]\+\)/
+syn match   junosInterface  /\(et\|xe\|ge\|vcp\|gr\)\-[0-9]\+\/[0-9]\+\/[0-9]\+\(\|\n\|\s\|\(\.[0-9]\+\)\|\(\:[0-9]\+\)\|\(\:[0-9]\+\.[0-9]\+\)\)/
 syn match   junosInterface  /\(ae\|reth\|fab\|vcp\|lo\)[0-9]\+\(\|\n\|\s\|\.[0-9]\+\)/
-syn match   junosInterface  /virtual\-chassis/
-syn match   junosInterface  /vlan\sunit\s[0-9]\+/
+syn match   junosInterface  /\(st0\|irb\)(\|\n\|\s\|\.[0-9]\+)/
+syn match   junosInterface  /virtual\-chassis\|vlan/
 
 " IPv4
 syn match   junosIpv4       /\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\(\.\(25[0-5]\|2[0-4]\d\|[01]\?\d\{1,2}\)\)\{3}\(\/[0-9]\{1,2\}\)\?/
